@@ -1,0 +1,37 @@
+﻿@charset "utf-8";
+
+/* CSS Document */
+html:not(.touchmode) ::-webkit-scrollbar {
+    width: 10px;
+  }
+  html:not(.touchmode) ::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+  }
+  html:not(.touchmode) ::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px transparent;
+  }
+
+.page_body{}
+.page_wrap{}
+.event_contents_wrap{max-width:750px; margin:0 auto;}
+.event_top{}
+.event_top > img{vertical-align: top;}
+.event_mid{background:#d3c6f7 url("../images/bg_mid.jpg") no-repeat 0 0/100% auto;}
+
+.event_note{padding:55px}
+.event_note_title_row{}
+.event_note_title{}
+.event_note_contents{}
+.event_note_list{}
+.event_note_list > li{}
+.event_note_list > li:last-of-type{}
+.event_note_list > li:before{}
+
+.indent_para_list{}
+.indent_para_list > li{}
+.indent_para_list > li:last-of-type{}
