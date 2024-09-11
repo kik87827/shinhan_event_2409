@@ -216,6 +216,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   display: flex;
 }
 .popup_wrap.active.motion_end .popup_box_item,
+.popup_wrap.active.motion_end .keyword_box_item,
 .popup_wrap.active.motion_end .popup_container_item,
 .popup_wrap.active.motion_end .popup_bottomsheet_item,
 .popup_wrap.active.motion_end .popup_item {
@@ -244,9 +245,9 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   right: 8px;
 }
 
-.btn_popup_close{display:inline-block;position:absolute;top:10px;right:10px;width:20px;height:20px;}
+.btn_popup_close{display:inline-block;position:absolute;top:10px;right:83px;width:32px;height:32px;}
 .btn_popup_close:before,
-.btn_popup_close:after{display:block;content:'';width:1px;height:16px;margin:-8px 0 0 -0.5px;background:#4d4d4d; position:absolute;top:50%;left:50%; transform: rotate(45deg);}
+.btn_popup_close:after{display:block;content:'';width:2px;height:40px;margin:-20px 0 0 -1px;background:#888888; position:absolute;top:50%;left:50%; transform: rotate(45deg);}
 .btn_popup_close:after{transform: rotate(-45deg);}
 .popup_item {
   box-sizing: border-box;z-index: 20;
@@ -296,12 +297,12 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 .btn_modal_submit:last-of-type:after{display:none;}
 
 .popup_box_tb {
-  display: table;width: 100%;height: 100%;
+  display: table;width: 100%;height: 100%; position:relative;
   table-layout: fixed;max-width: 750px;margin: 0 auto;
 }
 
 .popup_box_td {
-  display: table-cell;vertical-align: middle;padding: 30px 20px;
+  display: table-cell;vertical-align: middle;padding: 30px 0;
 }
 
 .modal_box_tb {
@@ -349,18 +350,29 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 .popup_screen_wrap img{vertical-align: top;}
 
 
-.keyword_box_item{}
-.keyword_box_inner{}
-.keyword_ptop_wrap{}
-.keyword_ptop_main_copy{}
-.keyword_ptop_main_copy img{}
-.keyword_ptop_sub_copy{}
+.keyword_box_item{
+  opacity: 0; transition: 0.4s opacity;
+  max-width:710px;margin:0 auto;text-align: center;background:url("../images/bg_docu_pink_01.png") no-repeat 0 0/100% auto;padding-top:77px;}
+.keyword_box_inner{ position:relative;background: url("../images/bg_docu_pink_02_2.png") repeat-y 0 77px/100% auto; padding-bottom:15px;}
+.keyword_box_item:after{display:block;content:'';background:url("../images/bg_docu_pink_03.png") no-repeat 0 0/100% auto;height:77px;}
+
+.keyword_box_item.type2{background-image:url("../images/bg_docu_pur_01.png");}
+.keyword_box_item.type2 .keyword_box_inner{background-image:url("../images/bg_docu_pur_02_2.png");}
+.keyword_box_item.type2:after{background-image:url("../images/bg_docu_pur_03.png");}
+.keyword_box_item.type2 .keyword_ptop_sub_copy{color:#7067a3;}
+
+.keyword_ptop_wrap{margin:0 auto; max-width:513px;}
+.keyword_ptop_main_copy{padding:40px 0 25px 0;}
+.keyword_ptop_main_copy img{vertical-align: top;}
+.keyword_ptop_sub_copy{font-size:28px; font-weight:500; color:#af514f; letter-spacing: -1px;}
 .keyword_pmid_wrap{}
-.keyword_screen_img{}
-.keyword_screen_img img{}
-.keyword_screen_para{}
-.keyword_screen_para strong{}
-.keyword_quadbox_wrap{}
+.keyword_screen_img{position:relative; overflow: hidden; border-radius: 18px;margin:30px auto 0; max-width:513px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+}
+.keyword_screen_img img{vertical-align: top;}
+.keyword_screen_para{margin-top:23px; font-size:18px; font-weight:500; color:#222222;}
+.keyword_screen_para strong{color:#0046ff; font-weight:500;}
+.keyword_quadbox_wrap{margin:0 auto 0; max-width:546px;}
 .keyword_quadbox_wrap .btn_quadbox{}
 .keyword_quadbox_wrap .btn_quadbox_text{}
 
@@ -370,3 +382,18 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   .popup_box_item{max-width:336px;}
 }
 
+@media (max-width:750px){
+  .btn_popup_close{top:1.333vw;right:11.067vw;width:4.267vw;height:4.267vw;}
+  .btn_popup_close:before,
+  .btn_popup_close:after{width:0.267vw;height:5.333vw;margin:-2.667vw 0 0 -0.133vw;}
+  .keyword_box_item{
+    max-width:94.667vw;padding-top:10.267vw;}
+  .keyword_box_inner{ background-position:0 10.267vw;padding-bottom:2vw;}
+  .keyword_box_item:after{height:10.267vw;}
+  .keyword_ptop_wrap{max-width:68.4vw;}
+  .keyword_ptop_main_copy{padding:5.333vw 0 3.333vw 0; max-width:39.467vw; margin:0 auto;}
+  .keyword_ptop_sub_copy{font-size:3.733vw;}
+  .keyword_screen_img{border-radius: 2.4vw;margin-top:4vw; max-width:68.4vw;}
+  .keyword_screen_para{margin-top:3.067vw; font-size:2.4vw;}
+  .keyword_quadbox_wrap{max-width:72.8vw;}
+}

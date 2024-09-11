@@ -99,8 +99,8 @@ select::-ms-expand {display: none;}
 .bold_sym{font-weight:700 !important;}
 .warn,
 .warn *{color:#c80000 !important;}
-.touchDis {touch-action: none;overflow:hidden;position:fixed;left:0;top:0;width:100%;height:100%;bottom:0;}
-.touchDis2{touch-action: none;overflow:hidden;position:relative;}
+/* .touchDis {touch-action: none;overflow:hidden;position:fixed;left:0;top:0;width:100%;height:100%;bottom:0;} */
+.touchDis{touch-action: none;overflow:hidden;position:relative;}
 .ellips{display:inline-block; white-space: nowrap; text-overflow: ellipsis;overflow:hidden;position:relative; max-width:99%;}
 .hdtext{display:inline-block;width:0;height:0;overflow:hidden;line-height:0;color:transparent;position:absolute;top:0;left:-99999px;}
 .clearboth{clear:both; display:block; height:0;}
