@@ -18,35 +18,42 @@
 			<div class="event_mid">
 				<div class="mid_block_wrap">
 					<div class="mid_block">
-						<div class="block_title_row"><p class="block_title"><img src="./assets/images/block_title_01.png" alt=""></p></div>
+						<div class="block_title_row">
+							<p class="block_title">마음에 드는 관심 <span class="block_word_key">키</span><span class="block_word_key">워</span><span class="block_word_key">드</span>를 뽑아주세요!</p>
+						</div>
 						<div class="block_contents">
 							<div class="keyword_item_wrap">
 								<ul class="keyword_item_list">
 									<li>
 										<a href="javascript:;" class="keyword_item" id="keyword_item_01">
-											<img src="./assets/images/docu_obj_01.png" alt="">
+											<img src="./assets/images/docu_obj_01.png" class="before" alt="">
+											<img src="./assets/images/docu_obj_01_active.png" class="after" alt="">
 										</a>
 									</li>
 									<li>
 										<a href="javascript:;" class="keyword_item" id="keyword_item_02">
-											<img src="./assets/images/docu_obj_02.png" alt="">
+											<img src="./assets/images/docu_obj_02.png" class="before" alt="">
+											<img src="./assets/images/docu_obj_02_active.png" class="after" alt="">
 										</a>
 									</li>
 								</ul>
 								<ul class="keyword_item_list">
 									<li>
 										<a href="javascript:;" class="keyword_item" id="keyword_item_03">
-											<img src="./assets/images/docu_obj_03.png" alt="">
+											<img src="./assets/images/docu_obj_03.png" class="before" alt="">
+											<img src="./assets/images/docu_obj_03_active.png" class="after" alt="">
 										</a>
 									</li>
 									<li>
 										<a href="javascript:;" class="keyword_item" id="keyword_item_04">
-											<img src="./assets/images/docu_obj_04.png" alt="">
+											<img src="./assets/images/docu_obj_04.png" class="before" alt="">
+											<img src="./assets/images/docu_obj_04_active.png" class="after" alt="">
 										</a>
 									</li>
 									<li>
 										<a href="javascript:;" class="keyword_item" id="keyword_item_05">
-											<img src="./assets/images/docu_obj_05.png" alt="">
+											<img src="./assets/images/docu_obj_05.png" class="before" alt="">
+											<img src="./assets/images/docu_obj_05_active.png" class="after" alt="">
 										</a>
 									</li>
 								</ul>
@@ -54,7 +61,7 @@
 						</div>
 					</div>
 					<div class="mid_block">
-						<div class="block_title_row"><p class="block_title skin2"><img src="./assets/images/block_title_02.png" alt=""></p></div>
+						<div class="block_title_row"><p class="block_title">이벤트 방법</p></div>
 						<div class="block_contents">
 							<div class="event_method_wrap">
 								<img src="./assets/images/step_obj.png" alt="">
@@ -72,7 +79,7 @@
 								<span class="espec_thtext">이벤트 기간</span>
 							</div>
 							<div class="espec_cell define_td">
-								<span class="espec_tdtext">2024.09.26(목)~2024.11.30(토)</span>
+								<span class="espec_tdtext">2024.09.26(목)~11.30(토)</span>
 							</div>
 						</li>
 						<li>
@@ -95,7 +102,7 @@
 				</div>
 				<div class="mid_block_wrap type2">
 					<div class="mid_block">
-						<div class="block_title_row"><p class="block_title skin3"><img src="./assets/images/block_title_03.png" alt=""></p></div>
+						<div class="block_title_row"><p class="block_title skin3">이벤트 경품</p></div>
 						<div class="block_contents">
 							<div class="present_grid_container">
 								<div class="pgrid_cols short">
@@ -162,7 +169,7 @@
 						</div>
 					</div>
 					<div class="mid_block">
-						<div class="block_title_row"><p class="block_title skin4"><img src="./assets/images/block_title_04.png" alt=""></p></div>
+						<div class="block_title_row"><p class="block_title skin4">신규 앱 가입 이벤트</p></div>
 						<div class="block_contents">
 							<div class="event_prebox">
 								<div class="prebox_top">
@@ -443,22 +450,42 @@
 			document.querySelector("#keyword_item_01").addEventListener("click",(e)=>{
 				e.preventDefault();
 				keyword_popup_01.popupShow();
+				let thisItem = e.currentTarget;
+				setTimeout(()=>{
+					thisItem.classList.add("active");
+				},500);
 			});
 			document.querySelector("#keyword_item_02").addEventListener("click",(e)=>{
 				e.preventDefault();
 				keyword_popup_02.popupShow();
+				let thisItem = e.currentTarget;
+				setTimeout(()=>{
+					thisItem.classList.add("active");
+				},500);
 			});
 			document.querySelector("#keyword_item_03").addEventListener("click",(e)=>{
 				e.preventDefault();
 				keyword_popup_03.popupShow();
+				let thisItem = e.currentTarget;
+				setTimeout(()=>{
+					thisItem.classList.add("active");
+				},500);
 			});
 			document.querySelector("#keyword_item_04").addEventListener("click",(e)=>{
 				e.preventDefault();
 				keyword_popup_04.popupShow();
+				let thisItem = e.currentTarget;
+				setTimeout(()=>{
+					thisItem.classList.add("active");
+				},500);
 			});
 			document.querySelector("#keyword_item_05").addEventListener("click",(e)=>{
 				e.preventDefault();
 				keyword_popup_05.popupShow();
+				let thisItem = e.currentTarget;
+				setTimeout(()=>{
+					thisItem.classList.add("active");
+				},500);
 			});
 
 
@@ -469,14 +496,29 @@
 			// 퍼블확인용
 			if(url_2 === "popup_01"){
 				keyword_popup_01.popupShow();
+				setTimeout(()=>{
+					document.querySelector("#keyword_item_01").classList.add("active");
+				},500);
 			}else if(url_2 === "popup_02"){
 				keyword_popup_02.popupShow();
+				setTimeout(()=>{
+					document.querySelector("#keyword_item_02").classList.add("active");
+				},500);
 			}else if(url_2 === "popup_03"){
 				keyword_popup_03.popupShow();
+				setTimeout(()=>{
+					document.querySelector("#keyword_item_03").classList.add("active");
+				},500);
 			}else if(url_2 === "popup_04"){
 				keyword_popup_04.popupShow();
+				setTimeout(()=>{
+					document.querySelector("#keyword_item_04").classList.add("active");
+				},500);
 			}else if(url_2 === "popup_05"){
 				keyword_popup_05.popupShow();
+				setTimeout(()=>{
+					document.querySelector("#keyword_item_05").classList.add("active");
+				},500);
 			}
         });
 	</script>
