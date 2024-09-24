@@ -257,3 +257,25 @@ class DesignPopup {
       },500);
     }
   }
+
+
+  function dotMotion(){
+    let domTarget = $(".dot_motion");
+    
+    domTarget.each(function(){
+      let $this = $(this);
+      let $this_child = $this.find(".block_word_key");
+      let $this_child_length = $this_child.length;
+      let timerValue = 0;
+      let countNum = 0;
+      if(timerValue === 0){
+        timerValue = setInterval(()=>{
+          $this_child.removeClass("active");
+          if(countNum>$this_child_length-1){
+            countNum = 0;
+          }
+          $this_child.eq(countNum++).addClass("active");
+        },400);
+      }
+    });
+  }
