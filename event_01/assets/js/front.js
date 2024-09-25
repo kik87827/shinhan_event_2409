@@ -270,10 +270,12 @@ class DesignPopup {
       let countNum = 0;
       if(timerValue === 0){
         timerValue = setInterval(()=>{
-          $this_child.removeClass("active");
           if(countNum>$this_child_length-1){
             countNum = 0;
+            $this_child.removeClass("active");
+            return;
           }
+
           $this_child.eq(countNum++).addClass("active");
         },400);
       }
